@@ -65,7 +65,7 @@ function App() {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   // Replace this URL with your Google Apps Script Web App URL
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzh2J4SkmfaRcBYEhBPwNfZgxHbD-FbXgZR3kCHn9xjPUG5N-u0rabgTjKLIMGJyVAWuQ/exec';
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwW7lBGJ6cUTuY8nB7JseRJOU-H0ODXONRHZ-D_ug5SIKfd1s3lWutc2Q4lHfWayZntIA/exec';
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
