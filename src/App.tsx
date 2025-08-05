@@ -65,7 +65,7 @@ function App() {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   // Replace this URL with your Google Apps Script Web App URL
-  const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzh2J4SkmfaRcBYEhBPwNfZgxHbD-FbXgZR3kCHn9xjPUG5N-u0rabgTjKLIMGJyVAWuQ/exec';
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -128,12 +128,6 @@ function App() {
     setSubmitStatus('idle');
 
     try {
-      // For now, we'll simulate the API call
-      // Replace this with actual Google Sheets integration
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Uncomment this section when you have your Google Apps Script URL
-      /*
       const response = await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         headers: {
@@ -145,7 +139,6 @@ function App() {
       if (!response.ok) {
         throw new Error('Failed to submit form');
       }
-      */
 
       setSubmitStatus('success');
       setFormData({
@@ -544,17 +537,6 @@ function App() {
               )}
             </button>
           </form>
-        </div>
-
-        <div className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-4">
-          <h3 className="font-semibold text-blue-900 mb-2">Petunjuk Setup Google Sheets:</h3>
-          <ol className="text-sm text-blue-800 space-y-1 list-decimal list-inside">
-            <li>Buat Google Sheet baru untuk data produksi</li>
-            <li>Buka Extensions → Apps Script di Google Sheet</li>
-            <li>Ganti kode default dengan kode Google Apps Script yang disediakan</li>
-            <li>Deploy sebagai web app dan copy URL-nya</li>
-            <li>Ganti GOOGLE_SCRIPT_URL di kode dengan URL web app Anda</li>
-          </ol>
         </div>
       </div>
     </div>
