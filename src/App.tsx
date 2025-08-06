@@ -131,6 +131,7 @@ function App() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'access-control-allow-origin': '*'
         },
         body: JSON.stringify(formData),
       });
