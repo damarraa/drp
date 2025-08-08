@@ -64,8 +64,11 @@ function App() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw57_YUWSJoqZ426OX66gdRV7i8UFOg4IeJUo2Pu8WkqiwwJ8AjQE6YloNq2PczAuNnKA/exec';
-
+  // const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw57_YUWSJoqZ426OX66gdRV7i8UFOg4IeJUo2Pu8WkqiwwJ8AjQE6YloNq2PczAuNnKA/exec';
+  
+  // Using make.com
+  const GOOGLE_SCRIPT_URL = 'https://hook.eu2.make.com/9cuyrpjbw7aaeh5gmeytc3gnh8k770vg';
+  
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
 
